@@ -6,7 +6,6 @@
 wallpaper=/etc/.scripts/misc/space.jpg
 dconf_db_usr=user
 dconf_db_sys=local
-dconf_db_sys=local
 
 # Cria uma pasta para armazenamento de novos perfis de administração
 mkdir -p /etc/dconf/profile
