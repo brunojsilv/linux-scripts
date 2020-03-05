@@ -24,14 +24,14 @@ mkdir -p /etc/dconf/db/$dconf_db_sys.d/locks
 # Remove o arquivo anterior de trava da chave do usuário com a configuração
 rm /etc/dconf/db/$dconf_db_sys.d/locks/time_lock
 
-# Grava um arquivo de chave do usuário dconf
-echo -e "[org/gnome/desktop/session]\nidle-delay $time" > /etc/dconf/db/$dconf_db_sys.d/time_lock.key
-
 # Atualiza o dconf aplicando essa configuração no banco de dados
 dconf update
 
+# Grava um arquivo de chave do usuário dconf
+echo -e "[org/gnome/desktop/session]\nidle-delay=uint32 $time\n[org/gnome/desktop/screensaver]\nlock-delay=uint32 0" > /etc/dconf/db/$dconf_db_sys.d/time_lock.key
+
 # Grava o arquivo de trava da chave do usuário com a configuração
-echo -e "/org/gnome/desktop/session/idle-delay" > /etc/dconf/db/$dconf_db_sys.d/locks/time_lock
+echo -e "/org/gnome/desktop/session/idle-delay\n/org/gnome/desktop/screensaver/lock-delay" > /etc/dconf/db/$dconf_db_sys.d/locks/time_lock
 
 # Atualiza o dconf aplicando essa configuração no banco de dados
 dconf update
