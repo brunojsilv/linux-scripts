@@ -23,11 +23,11 @@ mkdir -p /etc/dconf/db/$dconf_db_sys.d/locks
 # Remove o arquivo de trava da chave do usuário com a configuração do wallpaper
 rm /etc/dconf/db/$dconf_db_sys.d/locks/wallpaper
 
-# Grava um arquivo de chave do usuário com a configuração do wallpaper
-echo -e "[org/gnome/desktop/background]\npicture-uri='file://$wallpaper'" > /etc/dconf/db/$dconf_db_sys.d/wallpaper.key
-
 # Atualiza o dconf aplicando essa configuração no banco de dados
 dconf update
+
+# Grava um arquivo de chave do usuário com a configuração do wallpaper
+echo -e "[org/gnome/desktop/background]\npicture-uri='file://$wallpaper'" > /etc/dconf/db/$dconf_db_sys.d/wallpaper.key
 
 # Grava o arquivo de trava da chave do usuário com a configuração do wallpaper
 echo -e "/org/gnome/desktop/background/picture-uri\n/org/gnome/desktop/background/picture-options\n/org/gnome/desktop/background/primary-color\n/org/gnome/desktop/background/secondary-color" > /etc/dconf/db/$dconf_db_sys.d/locks/wallpaper
