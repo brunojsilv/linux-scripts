@@ -4,7 +4,7 @@
 
 # Variaveis
 #valor de time é o tempo para o bloqueio da tela em segundos 
-time=600
+time=300
 dconf_db_usr=user
 dconf_db_sys=local
 
