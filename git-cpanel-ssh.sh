@@ -7,7 +7,7 @@ echo "Informe o nome de host do computador local"
 read host
 
 echo "Informe o nome do reposítorio"
-read host
+read repo
 
 ssh-keygen -t rsa -b 4096 -C "$user@$host"
 
