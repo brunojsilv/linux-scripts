@@ -1,12 +1,9 @@
 #!/bin/bash
 
-echo "Informe o nome do usuário local"
-read user
-
 echo "Informe o nome do host"
 read host
 
-ssh-keygen -t rsa -b 4096 -C "$user@$host"
+ssh-keygen -t rsa -b 4096 -C "$USER@$host"
 
 echo -e "\nCopie a chave abaixo e instale no seu reposítorio privado:\n"
 
