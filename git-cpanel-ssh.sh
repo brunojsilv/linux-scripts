@@ -3,11 +3,8 @@
 echo "Informe o nome do usuário local"
 read user
 
-echo "Informe o nome de host do computador local"
+echo "Informe o nome do host"
 read host
-
-echo "Informe o nome do reposítorio"
-read repo
 
 ssh-keygen -t rsa -b 4096 -C "$user@$host"
 
@@ -26,4 +23,4 @@ read repoaux
 
 git clone git@bitbucket.org:$repoaux
 
-rm -rf $repo
+rm -rf $host
