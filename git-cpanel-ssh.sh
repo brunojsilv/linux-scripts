@@ -1,5 +1,7 @@
 #!/bin/bash
 
+clear
+
 echo "Informe o nome do usuário local"
 read user
 
@@ -24,3 +26,5 @@ read repoaux
 git clone git@bitbucket.org:$repoaux
 
 rm -rf $host
+
+clear
