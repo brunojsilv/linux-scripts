@@ -11,7 +11,7 @@ read repo
 
 ssh-keygen -t rsa -b 4096 -C "$user@$host"
 
-echo -e "\nCopie a chave abaixo e instale no seu reposítorio privado:"
+echo -e "\nCopie a chave abaixo e instale no seu reposítorio privado:\n"
 
 cat ~/.ssh/id_rsa.pub
 
