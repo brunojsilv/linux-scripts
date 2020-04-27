@@ -13,10 +13,7 @@ echo -e "\nPressione ENTER para continuar"
 
 read
 
-ssh -T git@bitbucket.org
-
-echo "Informe o nome do reposítorio que aparece na saída acima:"
-read repoaux
+repoaux=$(ssh -To "StrictHostKeyChecking = no" git@bitbucket.org | grep etaure)
 
 git clone git@bitbucket.org:$repoaux
 
