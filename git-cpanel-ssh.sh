@@ -13,7 +13,7 @@ echo -e "\nPressione ENTER para continuar"
 
 read
 
-repoaux=$(ssh -To "StrictHostKeyChecking = no" git@bitbucket.org | grep etaure)
+repoaux=$(ssh -To "StrictHostKeyChecking = no" git@bitbucket.org | grep $host)
 
 git clone git@bitbucket.org:$repoaux
 
