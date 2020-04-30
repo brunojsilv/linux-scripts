@@ -26,12 +26,12 @@ git config --global pack.threads "1"
 
 #Salvando alterações no repositório local
 git add .
-git commit -m '$msgcom'
+git commit -m "$msgcom"
 
 #Enviando alterações para repositório remoto
 git push org master
 
 #Limpeza das configurações aplicadas ao repositório local
 git remote rm org
-git config --global --unset-all user.name
-git config --global --unset-all user.email
+git config --unset-all user.name
+git config --unset-all user.email
