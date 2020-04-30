@@ -22,7 +22,7 @@ git config user.email "$email"
 git config user.name "$nome"
 git remote add org $repo
 
-git config --global pack.threads "1" 
+git config --global pack.threads "1"
 
 #Salvando alterações no repositório local
 git add .
@@ -35,3 +35,4 @@ git push org master
 git remote rm org
 git config --unset-all user.name
 git config --unset-all user.email
+git pull
