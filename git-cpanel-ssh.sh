@@ -3,7 +3,7 @@
 echo "Informe o nome do host deste computador"
 read host
 
-ssh-keygen -t rsa -b 4096 -C "$USER@$host"
+ssh-keygen -t rsa -b 4096 -C "$USER@$host" -f ~/.ssh/id_rsa
 
 echo -e "\nCopie a chave abaixo e instale no seu reposítorio privado:\n"
 
