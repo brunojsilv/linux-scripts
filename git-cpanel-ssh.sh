@@ -19,6 +19,9 @@ saida=1
 while [ $saida != 0 ]
 do
     repoaux=$(ssh -To "StrictHostKeyChecking = no" git@bitbucket.org | grep $host)
+     
+    echo $repoaux
+    read
 
     if [ $repoaux == "" ]; then
         echo -e "\nRepositório não encontrado! \n\nPresione ENTER para tentar novamente..."
