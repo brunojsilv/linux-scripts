@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo -e "- Gerador de chaves para repositórios privados BitBucket -\n"
+
 echo "Informe o nome do host deste computador"
 read host
 
@@ -13,8 +15,21 @@ echo -e "\nApós a instalação da chave pressione ENTER para continuar"
 
 read
 
-repoaux=$(ssh -To "StrictHostKeyChecking = no" git@bitbucket.org | grep $host)
+saida=1
+while [ $saida != 0 ]
+do
+    repoaux=$(ssh -To "StrictHostKeyChecking = no" git@bitbucket.org | grep $host)
 
-git clone git@bitbucket.org:$repoaux
+    if [ $repoaux == "" ]; then
+        echo -e "\nRepositório não encontrado! \n\nPresione ENTER para tentar novamente..."
+        read
+    else
+        saida=0
+        echo -e "\nRepositório encontrado! Executando clone de teste\n"
+        git clone git@bitbucket.org:$repoaux
+        rm -rf $host
+        echo -e "\nProcesso concluído!\n"
+    fi
 
-rm -rf $host
+done
+}
