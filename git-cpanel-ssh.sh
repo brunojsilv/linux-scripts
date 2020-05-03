@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e "- Gerador de chaves para repositórios privados BitBucket -\n"
+echo -e "\n- Gerador de chaves para repositórios privados BitBucket -\n"
 
 echo "Informe o nome do host deste computador"
 read host
