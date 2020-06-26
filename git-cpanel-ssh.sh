@@ -2,7 +2,7 @@
 
 echo -e "\n- Gerador de chaves para repositórios privados SSH -\n"
 
-echo "Informe o nome do host deste computador"
+echo "Informe o nome do repositório"
 read host
 
 echo "Informe o endereço do seu host de repositórios"
