@@ -16,6 +16,8 @@ HIDEUSER(){
 
 }
 
+clear
+
 ISROOT
 
 echo -e "Informe o nome do usuário que deseja ocultar do GDM (Gnome Display Manager)"
