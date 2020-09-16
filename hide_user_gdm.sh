@@ -10,11 +10,10 @@ ISROOT(){
 }
 
 HIDEUSER(){
-    touch /var/lib/AccountsService/users/$REMUSER
-    echo '[User]' >> /var/lib/AccountsService/users/$REMUSER
-    echo 'Language=' >> /var/lib/AccountsService/users/$REMUSER
-    echo 'XSession=gnome' >> /var/lib/AccountsService/users/$REMUSER
-    echo 'SystemAccount=true' >> /var/lib/AccountsService/users/$REMUSER
+
+	sed -i "s|^XSession=.*|XSession=gnome|g" /var/lib/AccountsService/users/$REMUSER
+	sed -i "s|^SystemAccount=.*|SystemAccount=true|g" /var/lib/AccountsService/users/$REMUSER
+
 }
 
 ISROOT
