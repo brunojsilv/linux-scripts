@@ -13,6 +13,8 @@ clear
 
 ISROOT
 
+echo -e "  -- Adicionar usuário AD como sudo  -- \n\n";
+
 echo "Informe o nome Netbios do domímio"
 read $DOMINIO
 

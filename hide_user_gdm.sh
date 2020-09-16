@@ -20,7 +20,9 @@ clear
 
 ISROOT
 
-echo -e "Informe o nome do usuário que deseja ocultar do GDM (Gnome Display Manager)"
+echo -e "  -- Ocultar usuário da tela de login Gnome  -- \n\n";
+
+echo "Informe o nome do usuário que deseja ocultar do GDM (Gnome Display Manager)"
 read REMUSER
 
 HIDEUSER
