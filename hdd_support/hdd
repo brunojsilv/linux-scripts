@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# Variáveis
+hdd='/dev/sdbX'
+
+mnt='/ponto/de/montagem'
+
+ISROOT(){
+	USUARIO=`whoami`
+	if [ "$USUARIO" != "root" ]; then
+		echo -e "\nESTE PROGRAMA PRECISA SER EXECUTADO COM PERMISSOES DE SUPERUSUARIO!" 
+		echo -e "Abortando...\n" 
+		exit 1
+	fi
+}
+
+fun_mount(){
+
+	#Desmonta o disco indicado pelo ponto de montagem
+	if [ "$1" == "umount" ]; then
+		sleep 1
+		umount $mnt
+		if [ $? -eq 0 ] ; then
+			echo "HD externo desmontado com sucesso!"
+		else
+			echo "Falha na desmontagem do disco!"
+		fi
+	
+	#Monta o disco indicado pelas variaveis globais
+	elif [ "$1" == "mount" ]; then
+		sleep 1
+		mount $hdd $mnt
+		if [ $? -eq 0 ] ; then
+			echo "HD externo montado com sucesso!"
+		else
+			echo "Falha na desmontagem do disco!"
+		fi
+	else
+		echo "Opção inválida!"
+		echo -e "\nSINTAXE: ./hdd <parâmetro>\n\nParâmetros:\nmount       Monta o disco externo no local configurado\numount      Desmonta o disco externo\n"
+	fi
+
+}
+
+ISROOT
+fun_mount $1
