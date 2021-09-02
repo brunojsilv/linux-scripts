@@ -11,11 +11,13 @@ if [ "$USUARIO" != "root" ]; then
   exit 1
 fi
 
+download_url=https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/91.0.3/linux-x86_64/pt-BR/thunderbird-91.0.3.tar.bz2
+
 echo -e " - Instalador automatizado do cliente de e-mail Thunderbird - \n";
 
 echo -e "Instalando... \n";
 
-curl -o thunderbird.tar.bz2 https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/91.0.3/linux-x86_64/pt-BR/thunderbird-91.0.3.tar.bz2 > /dev/null 2>&1
+curl -o thunderbird.tar.bz2 $download_url > /dev/null 2>&1
 
 tar -xf thunderbird.tar.bz2
 
