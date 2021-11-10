@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Caminho do repositório Mozilla Thunderbird: https://download-installer.cdn.mozilla.net/pub/thunderbird/releases
-
 clear
 
 USUARIO=`whoami`
@@ -10,8 +8,6 @@ if [ "$USUARIO" != "root" ]; then
   echo "Abortando..." 
   exit 1
 fi
-
-download_url=https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/91.1.2/linux-x86_64/pt-BR/thunderbird-91.1.2.tar.bz2
 
 echo -e " - Instalador automatizado do cliente de e-mail Thunderbird - \n";
 
