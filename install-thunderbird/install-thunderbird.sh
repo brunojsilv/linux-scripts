@@ -15,13 +15,13 @@ download_url=https://download-installer.cdn.mozilla.net/pub/thunderbird/releases
 
 echo -e " - Instalador automatizado do cliente de e-mail Thunderbird - \n";
 
+echo -e "OBS.: Certifique-se que o arquivo de instalação está na pasta raiz deste script.\n";
+
 echo -e "Instalando... \n";
 
-curl -o thunderbird.tar.bz2 $download_url > /dev/null 2>&1
+tar -xf thunderbird*.tar.bz2
 
-tar -xf thunderbird.tar.bz2
-
-rm -f thunderbird.tar.bz2
+rm -f thunderbird*.tar.bz2
 
 cp -rfu thunderbird /opt/
 
