@@ -53,3 +53,5 @@ sudo rm /usr/share/images/desktop-base/desktop-grub.png
 
 # Aplica a nova configuração ao grub
 sudo update-grub
+
+sudo reboot
