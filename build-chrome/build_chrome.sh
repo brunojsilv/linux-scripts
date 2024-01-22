@@ -1,5 +1,5 @@
 #!/bin/bash
-
+cls
 echo -e "SCRIPT DE PREPARAÇÃO DO SISTEMA\n"
 
 echo "Informe o nome de usuário da maquina: "
@@ -14,15 +14,12 @@ sudo apt install i3 i3blocks xorg lightdm nitrogen udiskie wget plymouth-themes 
 
 # Instala o pacote oficial do Google Chrome para Debian
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo apt -f -y install ./google-chrome-stable_current_amd64.deb
+sudo apt -f install ./google-chrome-stable_current_amd64.deb
 
 # Configura o auto-login do sistema
 sudo sh -c "echo '[SeatDefaults]\nautologin-user=$USUARIO\nautologin-user-timeout=0' >> /etc/lightdm/lightdm.conf"
 
 # Configuração o i3wm
-
-# Inicia o ambiente i3 pela primeira vez
-i3
 
 # Adiciona linhas de ocultação na sessão de configuração da barra inferior
 sed -i '/status_command/a        mode hide\n        hidden_state hide\n        modifier $mod' .config/i3/config
