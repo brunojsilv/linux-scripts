@@ -10,7 +10,7 @@ sudo apt update
 sudo apt upgrade -y
 
 # Instala os pacotes principais de utilizador
-sudo apt install i3 i3blocks xorg lightdm nitrogen udiskie wget plymouth-themes -y
+sudo apt install i3 i3blocks xorg lightdm udiskie wget plymouth-themes ntp -y
 
 # Instala o pacote oficial do Google Chrome para Debian
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
