@@ -1,5 +1,5 @@
 #!/bin/bash
-cls
+clear
 echo -e "SCRIPT DE PREPARAÇÃO DO SISTEMA\n"
 
 echo "Informe o nome de usuário da maquina: "
