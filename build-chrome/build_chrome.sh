@@ -2,7 +2,8 @@
 
 echo -e "SCRIPT DE PREPARAÇÃO DO SISTEMA\n"
 
-read -p "Informe o nome de usuário da maquina: " USUARIO
+echo "Informe o nome de usuário da maquina: "
+read USUARIO
 
 # Atualização inicial dos pacotes
 sudo apt update
